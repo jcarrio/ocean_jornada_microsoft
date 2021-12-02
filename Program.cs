@@ -41,6 +41,7 @@ namespace dotnetcore
             // Console.WriteLine($"Divisão: {divisao:C}");  // Formata como moeda, currency
             Console.WriteLine($"Divisão: {divisao:0.00}");  // Google: c# string interpolation decimal 2 digits
 */
+/*
             // Desafio 1
             // Calculadora dos 10% do garçom
             var valorConta = 45.35;
@@ -52,7 +53,9 @@ namespace dotnetcore
 
             Console.WriteLine($"Valor da conta foi de R{valorConta:C}."); // Currency
             Console.WriteLine($"Porcentagem do garçom foi de R{porcentagemGarcom:C}."); // Currency
-            Console.WriteLine($"Valor do garçom foi de R{valorTotal:C}."); // Currency
+//            Console.WriteLine($"Valor do garçom foi de R{valorTotal:C}."); // Currency
+            Console.WriteLine("Valor do garçom foi de R{0:C}.",valorTotal); // Currency
+*/
 /*
 Desafio para depois:
 
@@ -65,11 +68,17 @@ Dificuldade: Principiante
 2 - Quantas pedras ela lançaria em 8 baterias de 7 minutos, cada?
 
 3 - Crie um programa que receba os valores base para que a aplicação funcione de forma que, se alterarmos o número de baterias e a duração de cada bateria, o programa funcione sem precisar de mais modificações.
-*/            
+*/       
+/*     
             var pedras = 300;
             var baterias = 5;
             var tempo = 15;
             var 
+            */
+            
+            int hora = int.Parse(TimeZoneInfo.ConvertTime(DateTime.Now, TimeZoneInfo.FindSystemTimeZoneById("E. South America Standard Time")).ToString("HH"));
+            string msg = hora < 12 ? "Bom dia!" : hora < 18 ? "Boa tarde!" : "Boa noite!";
+            Console.WriteLine(msg);
         }
     }
 }
