@@ -75,10 +75,19 @@ Dificuldade: Principiante
             var tempo = 15;
             var 
             */
-            
+
             int hora = int.Parse(TimeZoneInfo.ConvertTime(DateTime.Now, TimeZoneInfo.FindSystemTimeZoneById("E. South America Standard Time")).ToString("HH"));
             string msg = hora < 12 ? "Bom dia!" : hora < 18 ? "Boa tarde!" : "Boa noite!";
             Console.WriteLine(msg);
+
+            int numero;
+            int soma = 0;
+            do {
+                Console.Write("Digite um número: ");
+                numero = int.Parse(Console.ReadLine());
+                soma += numero;
+            } while (numero != 0);
+            Console.WriteLine("A soma é igual a {0}", soma);
         }
     }
 }
